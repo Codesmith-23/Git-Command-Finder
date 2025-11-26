@@ -88,19 +88,6 @@ npm test
 npm run test:watch
 ```
 
-## Contributing
-
-Contributions are welcome! Feel free to:
-
-- Add more Git commands to `public/data.json`
-- Improve search functionality
-- Enhance UI/UX
-- Fix bugs or add features
-
-## License
-
-MIT License - feel free to use this project for personal or commercial purposes.
-
-## Acknowledgments
+09## Acknowledgments
 
 Built with modern web technologies and designed for developers who want quick access to Git commands without leaving their workflow.
