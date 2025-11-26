@@ -1,0 +1,207 @@
+{
+  "commands": [
+    {
+      "id": "create-branch",
+      "description": "Create a new branch and switch to it",
+      "command": "git checkout -b branch-name",
+      "category": "branching",
+      "tags": ["branch", "create", "switch", "new"]
+    },
+    {
+      "id": "list-branches",
+      "description": "List all local branches",
+      "command": "git branch",
+      "category": "branching",
+      "tags": ["branch", "list", "show"]
+    },
+    {
+      "id": "delete-branch",
+      "description": "Delete a local branch",
+      "command": "git branch -d branch-name",
+      "category": "branching",
+      "tags": ["branch", "delete", "remove"]
+    },
+    {
+      "id": "rename-branch",
+      "description": "Rename the current branch",
+      "command": "git branch -m new-branch-name",
+      "category": "branching",
+      "tags": ["branch", "rename", "move"]
+    },
+    {
+      "id": "switch-branch",
+      "description": "Switch to an existing branch",
+      "command": "git checkout branch-name",
+      "category": "branching",
+      "tags": ["branch", "switch", "checkout"]
+    },
+    {
+      "id": "merge-branch",
+      "description": "Merge a branch into the current branch",
+      "command": "git merge branch-name",
+      "category": "merging",
+      "tags": ["merge", "combine", "integrate"]
+    },
+    {
+      "id": "abort-merge",
+      "description": "Abort a merge in progress and return to pre-merge state",
+      "command": "git merge --abort",
+      "category": "merging",
+      "tags": ["merge", "abort", "cancel", "undo"]
+    },
+    {
+      "id": "merge-no-ff",
+      "description": "Merge with a merge commit even if fast-forward is possible",
+      "command": "git merge --no-ff branch-name",
+      "category": "merging",
+      "tags": ["merge", "no-fast-forward", "commit"]
+    },
+    {
+      "id": "resolve-conflicts",
+      "description": "Mark conflicts as resolved and continue merge",
+      "command": "git add . && git commit",
+      "category": "merging",
+      "tags": ["merge", "conflict", "resolve", "fix"]
+    },
+    {
+      "id": "commit-changes",
+      "description": "Commit staged changes with a message",
+      "command": "git commit -m \"commit message\"",
+      "category": "commits",
+      "tags": ["commit", "save", "message"]
+    },
+    {
+      "id": "commit-all",
+      "description": "Stage and commit all tracked changes",
+      "command": "git commit -am \"commit message\"",
+      "category": "commits",
+      "tags": ["commit", "all", "stage"]
+    },
+    {
+      "id": "amend-commit",
+      "description": "Modify the last commit",
+      "command": "git commit --amend",
+      "category": "commits",
+      "tags": ["commit", "amend", "modify", "edit", "change"]
+    },
+    {
+      "id": "undo-commit-keep-changes",
+      "description": "Undo the last commit but keep changes staged",
+      "command": "git reset --soft HEAD~1",
+      "category": "commits",
+      "tags": ["undo", "commit", "keep", "revert"]
+    },
+    {
+      "id": "empty-commit",
+      "description": "Create an empty commit (useful for triggering CI)",
+      "command": "git commit --allow-empty -m \"message\"",
+      "category": "commits",
+      "tags": ["commit", "empty", "ci", "trigger"]
+    },
+    {
+      "id": "view-log",
+      "description": "View commit history",
+      "command": "git log",
+      "category": "logs",
+      "tags": ["log", "history", "view", "commits"]
+    },
+    {
+      "id": "view-log-oneline",
+      "description": "View commit history in compact one-line format",
+      "command": "git log --oneline",
+      "category": "logs",
+      "tags": ["log", "history", "compact", "short"]
+    },
+    {
+      "id": "view-log-graph",
+      "description": "View commit history with branch graph",
+      "command": "git log --graph --oneline --all",
+      "category": "logs",
+      "tags": ["log", "history", "graph", "visual", "branches"]
+    },
+    {
+      "id": "view-file-history",
+      "description": "View commit history for a specific file",
+      "command": "git log -- filename",
+      "category": "logs",
+      "tags": ["log", "history", "file", "specific"]
+    },
+    {
+      "id": "reset-soft",
+      "description": "Move HEAD to a specific commit, keeping changes staged",
+      "command": "git reset --soft commit-hash",
+      "category": "reset",
+      "tags": ["reset", "undo", "soft", "keep"]
+    },
+    {
+      "id": "reset-mixed",
+      "description": "Move HEAD to a specific commit, unstaging changes",
+      "command": "git reset commit-hash",
+      "category": "reset",
+      "tags": ["reset", "undo", "mixed", "unstage"]
+    },
+    {
+      "id": "reset-hard",
+      "description": "Move HEAD to a specific commit, discarding all changes",
+      "command": "git reset --hard commit-hash",
+      "category": "reset",
+      "tags": ["reset", "undo", "hard", "discard", "delete"]
+    },
+    {
+      "id": "reset-file",
+      "description": "Unstage a specific file",
+      "command": "git reset HEAD filename",
+      "category": "reset",
+      "tags": ["reset", "unstage", "file"]
+    },
+    {
+      "id": "stash-changes",
+      "description": "Temporarily save uncommitted changes",
+      "command": "git stash",
+      "category": "stash",
+      "tags": ["stash", "save", "temporary", "store"]
+    },
+    {
+      "id": "stash-pop",
+      "description": "Apply and remove the most recent stash",
+      "command": "git stash pop",
+      "category": "stash",
+      "tags": ["stash", "apply", "restore", "pop"]
+    },
+    {
+      "id": "stash-list",
+      "description": "List all stashed changes",
+      "command": "git stash list",
+      "category": "stash",
+      "tags": ["stash", "list", "show"]
+    },
+    {
+      "id": "push-origin",
+      "description": "Push commits to remote repository",
+      "command": "git push origin branch-name",
+      "category": "remote",
+      "tags": ["push", "remote", "upload", "sync"]
+    },
+    {
+      "id": "pull-origin",
+      "description": "Fetch and merge changes from remote repository",
+      "command": "git pull origin branch-name",
+      "category": "remote",
+      "tags": ["pull", "remote", "download", "sync", "fetch"]
+    },
+    {
+      "id": "fetch-origin",
+      "description": "Download changes from remote without merging",
+      "command": "git fetch origin",
+      "category": "remote",
+      "tags": ["fetch", "remote", "download", "sync"]
+    },
+    {
+      "id": "clone-repo",
+      "description": "Clone a remote repository",
+      "command": "git clone repository-url",
+      "category": "remote",
+      "tags": ["clone", "copy", "download", "repository"]
+    }
+  ]
+}
